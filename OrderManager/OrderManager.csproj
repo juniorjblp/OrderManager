@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5140842-4BC0-493D-978D-E19BF99701FD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OrderManager</RootNamespace>
+    <AssemblyName>OrderManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b" />
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Libraryes\Bunifu Dataviz WinForms 2.1.5\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\Libraryes\Bunifu Dataviz WinForms 2.1.5\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\Libraryes\Bunifu Dataviz WinForms 2.1.5\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\Libraryes\Bunifu Dataviz WinForms 2.1.5\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\..\..\Libraryes\Bunifu Dataviz WinForms 2.1.5\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
+      <HintPath>..\..\..\Libraryes\Bunifu Dataviz WinForms 2.1.5\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildForms\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmCustomers.Designer.cs">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmNewCustomer.Designer.cs">
+      <DependentUpon>FrmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmNewProduct.Designer.cs">
+      <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmNewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmNewOrder.Designer.cs">
+      <DependentUpon>FrmNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmOrders.Designer.cs">
+      <DependentUpon>FrmOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmProducts.Designer.cs">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\FrmViewOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\FrmViewOrder.Designer.cs">
+      <DependentUpon>FrmViewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginScreen.Designer.cs">
+      <DependentUpon>FrmLoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMainScreen.Designer.cs">
+      <DependentUpon>FrmMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildForms\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmCustomers.resx">
+      <DependentUpon>FrmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmNewCustomer.resx">
+      <DependentUpon>FrmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmNewProduct.resx">
+      <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmNewOrder.resx">
+      <DependentUpon>FrmNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmOrders.resx">
+      <DependentUpon>FrmOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmProducts.resx">
+      <DependentUpon>FrmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\FrmViewOrder.resx">
+      <DependentUpon>FrmViewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginScreen.resx">
+      <DependentUpon>FrmLoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainScreen.resx">
+      <DependentUpon>FrmMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\Data.Category.datasource" />
+    <None Include="Properties\DataSources\Data.Customer.datasource" />
+    <None Include="Properties\DataSources\Data.Order.datasource" />
+    <None Include="Properties\DataSources\Data.Product.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{e6755700-4ab2-4af2-9f93-c82d945079b3}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{a14ef245-a624-4a85-a50c-203be8391e8f}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{466adb67-b42f-42a3-8f4e-999da7a4a530}</Project>
+      <Name>Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\channels4_profile-removebg-preview.ico" />
+    <Content Include="Resources\Images\channels4_profile-removebg-preview.png" />
+    <Content Include="Resources\Images\channels4_profile.jpg" />
+    <Content Include="Resources\Images\icons8-adicionar-dólar-32.png" />
+    <Content Include="Resources\Images\icons8-adicionar-etiqueta-64.png" />
+    <Content Include="Resources\Images\icons8-adicionar-usuário-masculino-50.png" />
+    <Content Include="Resources\Images\icons8-ajuda-32.png" />
+    <Content Include="Resources\Images\icons8-ajuda-50.png" />
+    <Content Include="Resources\Images\icons8-barato-2-32.png" />
+    <Content Include="Resources\Images\icons8-bate-papo-50.png" />
+    <Content Include="Resources\Images\icons8-caixa-registradora-50.png" />
+    <Content Include="Resources\Images\icons8-calendário-10-50.png" />
+    <Content Include="Resources\Images\icons8-caminhão-de-comida-50.png" />
+    <Content Include="Resources\Images\icons8-cardápio-50.png" />
+    <Content Include="Resources\Images\icons8-carrinho-de-compras-50.png" />
+    <Content Include="Resources\Images\icons8-cesta-de-compras-completa-50.png" />
+    <Content Include="Resources\Images\icons8-chevron-right-64.png" />
+    <Content Include="Resources\Images\icons8-configurações-do-usuário-64.png" />
+    <Content Include="Resources\Images\icons8-crachá-50.png" />
+    <Content Include="Resources\Images\icons8-crescimento-de-estoques-64.png" />
+    <Content Include="Resources\Images\icons8-câmbio-monetário-64.png" />
+    <Content Include="Resources\Images\icons8-dados-de-saúde-50.png" />
+    <Content Include="Resources\Images\icons8-depósito-64.png" />
+    <Content Include="Resources\Images\icons8-dividendos-64.png" />
+    <Content Include="Resources\Images\icons8-empresa-cliente-50.png" />
+    <Content Include="Resources\Images\icons8-estetoscópio-50.png" />
+    <Content Include="Resources\Images\icons8-etiqueta-de-preço-50.png" />
+    <Content Include="Resources\Images\icons8-export-excel-50.png" />
+    <Content Include="Resources\Images\icons8-exportar-pdf-50.png" />
+    <Content Include="Resources\Images\icons8-fazer-upload-50.png" />
+    <Content Include="Resources\Images\icons8-fechar-janela-64.png" />
+    <Content Include="Resources\Images\icons8-graphic-design-software-64.ico" />
+    <Content Include="Resources\Images\icons8-graphic-design-software-64.png" />
+    <Content Include="Resources\Images\icons8-imagem-completa-50.png" />
+    <Content Include="Resources\Images\icons8-lista-de-ingredientes-64.png" />
+    <Content Include="Resources\Images\icons8-logout-arredondado-50.png" />
+    <Content Include="Resources\Images\icons8-mais-calendário-64.png" />
+    <Content Include="Resources\Images\icons8-maximize-button-64.png" />
+    <Content Include="Resources\Images\icons8-microscópio-50.png" />
+    <Content Include="Resources\Images\icons8-minimizar-janela-64.png" />
+    <Content Include="Resources\Images\icons8-nova-mensagem-50.png" />
+    <Content Include="Resources\Images\icons8-pesquisar-50.png" />
+    <Content Include="Resources\Images\icons8-processador-64.png" />
+    <Content Include="Resources\Images\icons8-ram-de-smartphone-64.png" />
+    <Content Include="Resources\Images\icons8-remover-tag-64.png" />
+    <Content Include="Resources\Images\icons8-remover-usuário-masculino-32.png" />
+    <Content Include="Resources\Images\icons8-remover-usuário-masculino-64.png" />
+    <Content Include="Resources\Images\icons8-resume-website-50.png" />
+    <Content Include="Resources\Images\icons8-saco-de-dinheiro-64.png" />
+    <Content Include="Resources\Images\icons8-sair-50.png" />
+    <Content Include="Resources\Images\icons8-slice-64.png" />
+    <Content Include="Resources\Images\icons8-subtração-64.png" />
+    <Content Include="Resources\Images\icons8-syringe-with-a-drop-of-blood-50.png" />
+    <Content Include="Resources\Images\icons8-usuário-de-gênero-neutro-50.png" />
+    <Content Include="Resources\Images\icons8-usuário-homem-com-círculo-64.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
